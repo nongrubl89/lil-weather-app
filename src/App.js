@@ -23,10 +23,15 @@ function App() {
   const [zip, setZip] = useState("");
   const [appState, setAppState] = useState({
     loading: true,
-    weatherData: null,
+    weatherTemp: null,
+    weatherHigh: null,
+    weatherLow: null,
+    weatherCity: null,
   });
 
   useEffect(() => console.log(appState.weatherData));
+
+  const convertTemp = num=> Math.round((num-273.15) * 9/5 + 32) + '°';
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -35,9 +40,14 @@ function App() {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        const temp = Math.round((data.main.temp-273.15) * 9/5 + 32);
-        setAppState({loading: false, weatherData : temp})})
-      // .catch((err) => console.log(err));
+        console.log(data);
+        // const temp = Math.round((data.main.temp-273.15) * 9/5 + 32);
+        setAppState({loading: false, 
+                      weatherTemp : convertTemp(data.main.temp), 
+                      weatherCity: data.name, 
+                      weatherHigh: convertTemp(data.main.temp_max), 
+                      weatherLow: convertTemp(data.main.temp_min)})})
+      .catch((err) => console.log(err));
       
 }
 
@@ -45,7 +55,7 @@ function App() {
     <Container className='container'>
       <GlobalStyle/>
      <Form onSubmit = {handleSubmit} onChange={e => {setZip(e.target.value)}} zip={zip}/>
-     <Output loading={appState.loading} weatherData={appState.weatherData}/>
+     <Output loading={appState.loading} weatherTemp={appState.weatherTemp} weatherCity={appState.weatherCity} weatherHigh={appState.weatherHigh} weatherLow={appState.weatherLow}/>
     </Container>
   );
 }
