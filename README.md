@@ -1,1 +1,1 @@
-A quick weather app to practice my react skillz
+A quick weather app to practice my react skills
