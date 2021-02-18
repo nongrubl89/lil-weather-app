@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/lil-weather-app/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/lil-weather-app/static/js/main.b547df30.chunk.js",
-    "main.js.map": "/lil-weather-app/static/js/main.b547df30.chunk.js.map",
+    "main.js": "/lil-weather-app/static/js/main.6a6cf927.chunk.js",
+    "main.js.map": "/lil-weather-app/static/js/main.6a6cf927.chunk.js.map",
     "runtime-main.js": "/lil-weather-app/static/js/runtime-main.c3f4d949.js",
     "runtime-main.js.map": "/lil-weather-app/static/js/runtime-main.c3f4d949.js.map",
     "static/js/2.bd87bb64.chunk.js": "/lil-weather-app/static/js/2.bd87bb64.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.c3f4d949.js",
     "static/js/2.bd87bb64.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.b547df30.chunk.js"
+    "static/js/main.6a6cf927.chunk.js"
   ]
 }
