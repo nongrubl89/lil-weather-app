@@ -9,18 +9,26 @@ import { createGlobalStyle } from 'styled-components'
 const GlobalStyle = createGlobalStyle`
   body {
     background-color: #caf0f8;
+    font-family: "Inconsolata";
   }`
 
 const Container = styled.div
   `
   display: grid;
   grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 30vh 40vh;
+  grid-template-rows: 20vh 10vh 40vh;
   justify-items: center;
   `
+const Greeting = styled.h3 `
+grid-row:1;
+grid-column: 2/3;
+display: grid;
+align-content: end;`
 
 function App() {
   const [zip, setZip] = useState("");
+  // const [backgroundColor, setBackgroundColor]= useState('');
+  const [timeOfDay, setTimeOfDay] = useState('');
   const [appState, setAppState] = useState({
     loading: true,
     weatherTemp: null,
@@ -29,9 +37,25 @@ function App() {
     weatherCity: null,
   });
 
-  useEffect(() => console.log(appState.weatherData));
+  
+  
+  useEffect(() => {
+    const d = new Date(); 
+    const time = d.getHours();
+    if(time >=3 && time <=12){
+      setTimeOfDay('Morning')
+    } else if (time >=1 && time <=17){
+      setTimeOfDay('Afternoon')
+    } else if (time >=18 && time <= 2){
+      setTimeOfDay('Evening');
+    }
+    });
 
-  const convertTemp = num=> Math.round((num-273.15) * 9/5 + 32) + '°';
+  
+  
+    const convertTemp= (num) => {
+  return Math.round((num - 273.15) * 9 / 5 + 32) + '°';
+}
 
   const handleSubmit = (evt) => {
     evt.preventDefault();
@@ -53,6 +77,7 @@ function App() {
 
   return (
     <Container className='container'>
+      <Greeting>Good {timeOfDay}</Greeting>
       <GlobalStyle/>
      <Form onSubmit = {handleSubmit} onChange={e => {setZip(e.target.value)}} zip={zip}/>
      <Output loading={appState.loading} weatherTemp={appState.weatherTemp} weatherCity={appState.weatherCity} weatherHigh={appState.weatherHigh} weatherLow={appState.weatherLow}/>

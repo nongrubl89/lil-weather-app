@@ -6,11 +6,14 @@ padding: 1em;
 margin: .5em;
 border: none;
 border-radius: 12px;
+font-family: 'Inconsolata';
+font-weight: 600;
 `;
 
 const ButtonInput = styled(Input)
 `background-color: #0077b6;
-color:white;`
+color:white;
+`
 
 const Label = styled.label`
 color: #caf0f8`
@@ -21,6 +24,7 @@ align-content: end;
 justify-items: center;
 grid-template-columns: 70% 30%;
 grid-column-start:2;
+grid-row-start: 2;
 `
 
 function Form(props) {
