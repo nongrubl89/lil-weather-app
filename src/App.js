@@ -23,7 +23,8 @@ const Greeting = styled.h3 `
 grid-row:1;
 grid-column: 2/3;
 display: grid;
-align-content: end;`
+align-content: end;
+padding: 1em;`
 
 function App() {
   const [zip, setZip] = useState("");
