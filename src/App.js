@@ -41,11 +41,12 @@ function App() {
   
   
   useEffect(() => {
-    const d = new Date(); 
+    let d = new Date(); 
     const time = d.getHours();
-    if(time >=3 && time <=12){
+    console.log(time);
+    if(time >=3 && time <12){
       setTimeOfDay('Morning')
-    } else if (time >=1 && time <=17){
+    } else if (time >=12 && time <17){
       setTimeOfDay('Afternoon')
     } else if (time >=18 && time <= 2){
       setTimeOfDay('Evening');
