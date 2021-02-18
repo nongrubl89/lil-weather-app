@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/lil-weather-app/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/lil-weather-app/static/js/main.95eaa2d0.chunk.js",
+    "main.js.map": "/lil-weather-app/static/js/main.95eaa2d0.chunk.js.map",
+    "runtime-main.js": "/lil-weather-app/static/js/runtime-main.c3f4d949.js",
+    "runtime-main.js.map": "/lil-weather-app/static/js/runtime-main.c3f4d949.js.map",
+    "static/js/2.bd87bb64.chunk.js": "/lil-weather-app/static/js/2.bd87bb64.chunk.js",
+    "static/js/2.bd87bb64.chunk.js.map": "/lil-weather-app/static/js/2.bd87bb64.chunk.js.map",
+    "static/js/3.cdfabdd8.chunk.js": "/lil-weather-app/static/js/3.cdfabdd8.chunk.js",
+    "static/js/3.cdfabdd8.chunk.js.map": "/lil-weather-app/static/js/3.cdfabdd8.chunk.js.map",
+    "index.html": "/lil-weather-app/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/lil-weather-app/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.bd87bb64.chunk.js.LICENSE.txt": "/lil-weather-app/static/js/2.bd87bb64.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c3f4d949.js",
+    "static/js/2.bd87bb64.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.95eaa2d0.chunk.js"
+  ]
+}
